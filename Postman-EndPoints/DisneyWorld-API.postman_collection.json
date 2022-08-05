@@ -1,0 +1,541 @@
+{
+	"info": {
+		"_postman_id": "afdb6d0d-eef8-44f0-9703-ba644bf363b7",
+		"name": "DisneyWorld-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19100631"
+	},
+	"item": [
+		{
+			"name": "Characters",
+			"item": [
+				{
+					"name": "CRUD",
+					"item": [
+						{
+							"name": "/characters",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ1ZDRhODgwLWEyNmUtNGEwYS04YmMyLTI5ZmY2MWU2MDQ4ZSIsImlhdCI6MTY1OTMyMTY1MywiZXhwIjoxNjU5NDA4MDUzfQ.l3XzpgmvYfccP6MSjeOfLyUlXa7jVL5qWwk4x_WgHs8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"imagen\":  \"https://t2.uc.ltmcdn.com/es/posts/2/6/8/como_se_llama_mickey_mouse_en_todo_el_mundo_15862_600.jpg\",\r\n  \"nombre\": \"Mickey Mouse\",\r\n  \"edad\": 92,\r\n  \"peso\": 10,\r\n  \"historial\": \"Creado el 18 de noviembre de 1928, este ratón tiene un origen disputado. La leyenda oficial explica que fue creado por Walt Disney durante un viaje en tren y que su nombre inicial fue Mortimer, pero que cambió a Mickey a petición de su esposa, Lillian\"\r\n }\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/characters",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"characters"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/characters",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ1ZDRhODgwLWEyNmUtNGEwYS04YmMyLTI5ZmY2MWU2MDQ4ZSIsImlhdCI6MTY1OTMyMTY1MywiZXhwIjoxNjU5NDA4MDUzfQ.l3XzpgmvYfccP6MSjeOfLyUlXa7jVL5qWwk4x_WgHs8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"imagen\":  \"https://t2.uc.ltmcdn.com/es/posts/2/6/8/como_se_llama_mickey_mouse_en_todo_el_mundo_15862_600.jpg\",\r\n  \"nombre\": \"Mickey Mouse\",\r\n  \"edad\": 92,\r\n  \"peso\": 10,\r\n  \"historial\": \"Creado el 18 de noviembre de 1928, este ratón tiene un origen disputado. La leyenda oficial explica que fue creado por Walt Disney durante un viaje en tren y que su nombre inicial fue Mortimer, pero que cambió a Mickey a petición de su esposa, Lillian\"\r\n }\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/characters/a4d63309-e45e-4066-b299-866ca670139f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"characters",
+										"a4d63309-e45e-4066-b299-866ca670139f"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/Characters",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ1ZDRhODgwLWEyNmUtNGEwYS04YmMyLTI5ZmY2MWU2MDQ4ZSIsImlhdCI6MTY1OTMyMTY1MywiZXhwIjoxNjU5NDA4MDUzfQ.l3XzpgmvYfccP6MSjeOfLyUlXa7jVL5qWwk4x_WgHs8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/characters/a4d63309-e45e-4066-b299-866ca670139f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"characters",
+										"a4d63309-e45e-4066-b299-866ca670139f"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Searchs",
+					"item": [
+						{
+							"name": "/characters?age",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/characters?age=92",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"characters"
+									],
+									"query": [
+										{
+											"key": "age",
+											"value": "92"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/characters?name",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/characters?name=MickEy ",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"characters"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "MickEy "
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/characters?movies",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/characters?movies=c29ac994-0c66-48fb-b21c-d1d86c1c795a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"characters"
+									],
+									"query": [
+										{
+											"key": "movies",
+											"value": "c29ac994-0c66-48fb-b21c-d1d86c1c795a"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "List",
+					"item": [
+						{
+							"name": "/characters",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/characters",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"characters"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Detail",
+					"item": [
+						{
+							"name": "/characters/:idCharacter",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/characters/a4d63309-e45e-4066-b299-866ca670139f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"characters",
+										"a4d63309-e45e-4066-b299-866ca670139f"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "/auth/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"johannes.gomez@gmail.com\",\r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/auth/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"johannes\",\r\n    \"email\":\"johannes.gomez@gmail.com\",\r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movies",
+			"item": [
+				{
+					"name": "CRUD",
+					"item": [
+						{
+							"name": "/movies",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ1ZDRhODgwLWEyNmUtNGEwYS04YmMyLTI5ZmY2MWU2MDQ4ZSIsImlhdCI6MTY1OTMyMTY1MywiZXhwIjoxNjU5NDA4MDUzfQ.l3XzpgmvYfccP6MSjeOfLyUlXa7jVL5qWwk4x_WgHs8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"imagen\": \"https://i.blogs.es/09402d/fantasia-20cartel/1366_2000.jpg\",\r\n  \"titulo\": \"Fantasia\",\r\n  \"fechaCreacion\": \"12-07-1990\",\r\n  \"calificacion\": 5,\r\n  \"genderId\":\"003f1a27-2d4f-4bd8-b480-6cb477d967da\",\r\n  \"idCharacters\":\"a4d63309-e45e-4066-b299-866ca670139f\"\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/movies",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"movies"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/movies",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ1ZDRhODgwLWEyNmUtNGEwYS04YmMyLTI5ZmY2MWU2MDQ4ZSIsImlhdCI6MTY1OTMyMTY1MywiZXhwIjoxNjU5NDA4MDUzfQ.l3XzpgmvYfccP6MSjeOfLyUlXa7jVL5qWwk4x_WgHs8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"imagen\": \"https://i.blogs.es/09402d/fantasia-20cartel/1366_2000.jpg\",\r\n  \"titulo\": \"Fantasia\",\r\n  \"fechaCreacion\": \"12-07-1990\",\r\n  \"calificacion\": 5,\r\n  \"genderId\":\"003f1a27-2d4f-4bd8-b480-6cb477d967da\",\r\n  \"idCharacters\":\"a4d63309-e45e-4066-b299-866ca670139f\"\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/movies/c29ac994-0c66-48fb-b21c-d1d86c1c795a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"movies",
+										"c29ac994-0c66-48fb-b21c-d1d86c1c795a"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/Movies",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ1ZDRhODgwLWEyNmUtNGEwYS04YmMyLTI5ZmY2MWU2MDQ4ZSIsImlhdCI6MTY1OTMyMTY1MywiZXhwIjoxNjU5NDA4MDUzfQ.l3XzpgmvYfccP6MSjeOfLyUlXa7jVL5qWwk4x_WgHs8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/characters/c29ac994-0c66-48fb-b21c-d1d86c1c795a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"characters",
+										"c29ac994-0c66-48fb-b21c-d1d86c1c795a"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Searchs",
+					"item": [
+						{
+							"name": "/movies?name",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/movies?name=fantasia",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"movies"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "fantasia"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/movies?order=ASC || DESC",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/movies?order=DESC",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"movies"
+									],
+									"query": [
+										{
+											"key": "order",
+											"value": "DESC"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/movies?genre",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/movies?genre=003f1a27-2d4f-4bd8-b480-6cb477d967da",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"movies"
+									],
+									"query": [
+										{
+											"key": "genre",
+											"value": "003f1a27-2d4f-4bd8-b480-6cb477d967da"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Detail",
+					"item": [
+						{
+							"name": "/movies/:idMovies",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/movies/c29ac994-0c66-48fb-b21c-d1d86c1c795a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"movies",
+										"c29ac994-0c66-48fb-b21c-d1d86c1c795a"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "List",
+					"item": [
+						{
+							"name": "/movies",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/characters",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"characters"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
